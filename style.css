@@ -1,0 +1,82 @@
+body{
+    /* body 기본 속성이 margin: 8px이라서 지정해줌 */
+    margin: 0;
+
+    /* images 폴더에 저장했던 이미지를 주소로 가져온다 */
+    background-image: url("images/background.avif");
+
+    /* 배경에 사진이 반복되는것을 없애주고 늘려준다 */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container{
+    /* 컨테이너 배경 색깔 */
+    background-color: white;
+
+    /* vh = viewport height 내가 보는 화면의 높이 만큼을 나타냄 */
+    min-height: 100vh;
+
+    /* 컨테이너 밑 그림자 효과 */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.task-area{
+    /* 범위 확인을 위해 선을 그려주자 */
+    border: 1px solid lightgray;
+    margin-top: 2em;
+}
+
+/* 탭 목록 */
+.task-tabs{
+    /* tabs을 가로로 배치 */
+    display: flex;
+
+    /* 아래쪽에만 선을 그어 구분해주자 */
+    border-bottom: 1px solid lightgray;
+    /*  */
+    position: relative;
+}
+
+/* 탭 목록 공간 */
+.task-tabs div{
+    /* tabs 사이 공간 지정 */
+    padding: 1em;
+}
+
+
+/* 밑줄 효과 */
+#under-line{    /* 여러곳에서 쓰일것이므로 id로 줌 */
+    height: 4px;
+    background-color: pink;
+    /*  */
+    position: absolute;
+    width: 60px;
+    left: 0px;
+    top: 52px;
+    padding: 0px;
+}
+
+/* 할일 목록 */
+.task{
+    /* task 내용과 버튼을 가로로 배치 */
+    display: flex;
+
+    /* 사이의 간격 띄워 줌 */
+    justify-content: space-between;
+
+    padding: 1em;
+}
+
+/* check시 밑줄 */
+.task-done{
+    text-decoration: line-through;
+}
+
+
+/* 탭에 커서를 포인터로 변경 */
+.task-tabs div{
+    cursor:pointer;
+}
+
